@@ -4,7 +4,7 @@ hacker-news-node-ts-serverless
 
 documentation: https://documenter.getpostman.com/view/3827865/TVYF7yEq
 
-api url:
+api url: https://07yu2os42b.execute-api.ap-southeast-1.amazonaws.com/v1/
 
 ## Requirement:
 
