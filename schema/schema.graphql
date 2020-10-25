@@ -1,0 +1,12 @@
+type Query {
+  hackerNews(pageNumber: Int): [HackerNews!]!
+}
+
+type HackerNews {
+  title: String
+  uri: String
+  author: String
+  points: String
+  comments: String
+  rank: Int
+}
