@@ -1,3 +1,5 @@
+org: yeukfei02
+app: hacker-news-node-ts-serverless
 service: hacker-news-node-ts-serverless
 
 frameworkVersion: '2'
