@@ -1,0 +1,43 @@
+service: hacker-news-node-ts-serverless
+
+frameworkVersion: '2'
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  stage: v1
+  region: ap-southeast-1
+  environment:
+    NODE_ENV: production
+  iamRoleStatements:
+    - Effect: "Allow"
+      Action:
+        - "xray:PutTraceSegments"
+        - "xray:PutTelemetryRecords"
+      Resource:
+        - "*"
+
+functions:
+  graphql:
+    handler: src/handler.graphql
+    tracing: true
+    events:
+    - http:
+        path: /
+        method: post
+        cors: true
+
+  playground:
+    handler: src/handler.playground
+    tracing: true
+    events:
+    - http:
+        path: /
+        method: get
+        cors: true
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-offline
+  - serverless-plugin-tracing
+  - serverless-plugin-split-stacks
