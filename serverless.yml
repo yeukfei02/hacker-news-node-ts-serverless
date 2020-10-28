@@ -21,19 +21,14 @@ provider:
 
 functions:
   graphql:
-    handler: src/handler.graphql
+    handler: src/handler.graphqlHandler
     tracing: true
     events:
-    - http:
-        path: /
-        method: post
-        cors: true
-
-  playground:
-    handler: src/handler.playground
-    tracing: true
-    events:
-    - http:
+      - http:
+          path: /
+          method: post
+          cors: true
+      - http:
         path: /
         method: get
         cors: true

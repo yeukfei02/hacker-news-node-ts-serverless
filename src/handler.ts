@@ -1,4 +1,4 @@
-import { GraphQLServerLambda } from 'graphql-yoga';
+import { ApolloServer } from 'apollo-server-lambda';
 import typeDefs from '../schema/typeDefs';
 import resolvers from '../resolvers/resolvers';
 
@@ -6,10 +6,17 @@ import awsXRay from 'aws-xray-sdk';
 import awsSdk from 'aws-sdk';
 awsXRay.captureAWS(awsSdk);
 
-const lambda = new GraphQLServerLambda({
+const server = new ApolloServer({
   typeDefs,
   resolvers,
+  playground: {
+    endpoint: '/v1',
+  },
 });
 
-export const graphql = lambda.graphqlHandler;
-export const playground = lambda.playgroundHandler;
+export const graphqlHandler = server.createHandler({
+  cors: {
+    origin: true,
+    credentials: true,
+  },
+});
