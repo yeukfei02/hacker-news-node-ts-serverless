@@ -29,9 +29,9 @@ functions:
           method: post
           cors: true
       - http:
-        path: /
-        method: get
-        cors: true
+          path: /
+          method: get
+          cors: true
 
 plugins:
   - serverless-plugin-typescript
