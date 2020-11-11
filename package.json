@@ -16,8 +16,7 @@
     "graphql-import": "^1.0.2",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
-    "moment-timezone": "^0.5.31",
-    "ws": "^7.3.1"
+    "moment-timezone": "^0.5.31"
   },
   "devDependencies": {
     "@types/aws-sdk": "^2.7.0",
@@ -25,7 +24,6 @@
     "@types/lodash": "^4.14.162",
     "@types/moment-timezone": "^0.5.30",
     "@types/node": "^14.14.2",
-    "@types/ws": "^7.2.7",
     "@typescript-eslint/eslint-plugin": "^4.5.0",
     "@typescript-eslint/parser": "^4.5.0",
     "codecov": "^3.8.0",
