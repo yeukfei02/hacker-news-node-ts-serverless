@@ -1,5 +1,5 @@
-import { mainTest } from './main';
+import { hackerNewsTest } from './hackerNews';
 
 describe('testSuite test case', () => {
-  mainTest();
+  hackerNewsTest();
 });
