@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.3.0...v1.4.0) (2020-11-25)
+
+
+### Features
+
+* 🎸 add tracing ([877a915](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/877a915c827ca7233ea85bc2f45a5c6dbbe28ad5))
+
 ## [1.3.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.2.5...v1.3.0) (2020-11-14)
 
 
