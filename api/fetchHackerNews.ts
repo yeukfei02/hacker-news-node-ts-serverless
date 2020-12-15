@@ -3,6 +3,7 @@ import cheerio from 'cheerio';
 import _ from 'lodash';
 
 export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
+  const idList: any[] = [];
   const firstList: any[] = [];
   const secondList: any[] = [];
   const thirdList: any[] = [];
@@ -20,6 +21,17 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
       const html = responseData;
 
       const $ = cheerio.load(html);
+
+      $('table.itemlist tbody tr.athing').each((i, element) => {
+        const currentItem = $(element);
+        const id = currentItem.attr('id');
+        console.log('id = ', id);
+
+        const obj = {
+          id: id,
+        };
+        idList.push(obj);
+      });
 
       $('table.itemlist tbody tr td.title:nth-child(1)').each((i, element) => {
         const currentItem = $(element);
@@ -59,16 +71,22 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
 
           const subtext = currentItem.find('.subtext').children();
           const author = $(subtext).eq(1).text();
+
+          const hoursDiv = $(subtext).eq(2).children();
+          const hours = $(hoursDiv).eq(0).text();
+
           const points = $(subtext).eq(0).text();
           const comments = $(subtext).eq(5).text();
 
-          if (author && points && comments) {
+          if (author && hours && points && comments) {
             console.log('author = ', author);
+            console.log('hours = ', hours);
             console.log('points = ', points);
             console.log('comments = ', comments);
 
             const newObj = {
               author: author,
+              hours: hours,
               points: points,
               comments: comments,
             };
@@ -78,7 +96,7 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
     }
   }
 
-  const hackerNewsList = _.merge(firstList, secondList, thirdList);
+  const hackerNewsList = _.merge(idList, firstList, secondList, thirdList);
 
   return hackerNewsList;
 };
