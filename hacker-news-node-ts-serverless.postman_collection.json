@@ -1,0 +1,123 @@
+{
+	"info": {
+		"_postman_id": "acf5cbf0-43ed-4de1-8abb-7f612cf11b7a",
+		"name": "hacker-news-node-ts-serverless",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "queries",
+			"item": [
+				{
+					"name": "hackerNews",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query hackerNews ($pageNumber: Int) {\n    hackerNews (pageNumber: $pageNumber) {\n        title\n        uri\n        author\n        points\n        comments\n        rank\n    }\n}",
+								"variables": "{\n  \"pageNumber\": 1\n}"
+							},
+							"options": {
+								"graphql": {}
+							}
+						},
+						"url": {
+							"raw": "{{rootUrl}}",
+							"host": [
+								"{{rootUrl}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "hackerNews",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "graphql",
+									"graphql": {
+										"query": "query hackerNews ($pageNumber: Int) {\n    hackerNews (pageNumber: $pageNumber) {\n        title\n        uri\n        author\n        points\n        comments\n        rank\n    }\n}",
+										"variables": "{\n  \"pageNumber\": 1\n}"
+									},
+									"options": {
+										"graphql": {}
+									}
+								},
+								"url": {
+									"raw": "{{rootUrl}}",
+									"host": [
+										"{{rootUrl}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "content-type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "vary",
+									"value": "origin,accept-encoding"
+								},
+								{
+									"key": "access-control-allow-credentials",
+									"value": "true"
+								},
+								{
+									"key": "access-control-expose-headers",
+									"value": "WWW-Authenticate,Server-Authorization"
+								},
+								{
+									"key": "cache-control",
+									"value": "no-cache"
+								},
+								{
+									"key": "content-encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 25 Oct 2020 02:26:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"hackerNews\": [\n            {\n                \"title\": \"Pandoc: Swiss-army knife document converter (pandoc.org)\",\n                \"uri\": \"https://pandoc.org/\",\n                \"author\": \"johnsonjo\",\n                \"points\": \"124 points\",\n                \"comments\": \"27 comments\",\n                \"rank\": 1\n            },\n            {\n                \"title\": \"The Coming Civil War over General Purpose Computing (2012) (boingboing.net)\",\n                \"uri\": \"https://boingboing.net/2012/08/23/civilwar.html\",\n                \"author\": \"pdkl95\",\n                \"points\": \"271 points\",\n                \"comments\": \"93 comments\",\n                \"rank\": 2\n            },\n            {\n                \"title\": \"Three open source Sonos projects: efficient embedded development in Rust (sonos.com)\",\n                \"uri\": \"https://tech-blog.sonos.com/posts/three-open-source-sonos-projects-in-rust/\",\n                \"author\": \"lukastyrychtr\",\n                \"points\": \"95 points\",\n                \"comments\": \"25 comments\",\n                \"rank\": 3\n            },\n            {\n                \"title\": \"A small but complete JavaScript engine (bellard.org)\",\n                \"uri\": \"https://bellard.org/quickjs/\",\n                \"author\": \"creolabs\",\n                \"points\": \"222 points\",\n                \"comments\": \"43 comments\",\n                \"rank\": 4\n            },\n            {\n                \"title\": \"Microsoft Tilecode (microsoft.github.io)\",\n                \"uri\": \"https://microsoft.github.io/tilecode/\",\n                \"author\": \"Impossible\",\n                \"points\": \"347 points\",\n                \"comments\": \"29 comments\",\n                \"rank\": 5\n            },\n            {\n                \"title\": \"Vdx – An intuitive CLI for processing video, powered by FFmpeg (github.com/yuanqing)\",\n                \"uri\": \"https://github.com/yuanqing/vdx\",\n                \"author\": \"cheeaun\",\n                \"points\": \"41 points\",\n                \"comments\": \"10 comments\",\n                \"rank\": 6\n            },\n            {\n                \"title\": \"Samsung group chairman Lee Kun-hee has died (reuters.com)\",\n                \"uri\": \"https://www.reuters.com/article/samsung-electronics-chairman/samsung-group-chairman-lee-kun-hee-died-says-samsung-idUSS6N2H600D\",\n                \"author\": \"josephh\",\n                \"points\": \"49 points\",\n                \"comments\": \"12 comments\",\n                \"rank\": 7\n            },\n            {\n                \"title\": \"My toothbrush streams gyroscope data (johannes-mittendorfer.com)\",\n                \"uri\": \"https://blog.johannes-mittendorfer.com/artikel/2020/10/my-toothbrush-streams-gyroscope-data\",\n                \"author\": \"zdw\",\n                \"points\": \"76 points\",\n                \"comments\": \"49 comments\",\n                \"rank\": 8\n            },\n            {\n                \"title\": \"SK-Intel NAND deal points to wider shake-up of chip sector (nikkei.com)\",\n                \"uri\": \"https://asia.nikkei.com/Business/Business-deals/SK-Intel-NAND-deal-points-to-wider-shake-up-of-chip-sector\",\n                \"author\": \"totalZero\",\n                \"points\": \"9 points\",\n                \"comments\": \"discuss\",\n                \"rank\": 9\n            },\n            {\n                \"title\": \"Binwalk: Firmware Analysis Tool (github.com/refirmlabs)\",\n                \"uri\": \"https://github.com/ReFirmLabs/binwalk\",\n                \"author\": \"Memosyne\",\n                \"points\": \"19 points\",\n                \"comments\": \"3 comments\",\n                \"rank\": 10\n            },\n            {\n                \"title\": \"Falling five storeys from a New York rooftop changed my life (smh.com.au)\",\n                \"uri\": \"https://www.smh.com.au/world/north-america/i-was-howling-in-pain-how-falling-five-storeys-from-a-new-york-rooftop-changed-my-life-20200910-p55u9y.html\",\n                \"author\": \"danso\",\n                \"points\": \"237 points\",\n                \"comments\": \"105 comments\",\n                \"rank\": 11\n            },\n            {\n                \"title\": \"The Rome Toolchain: A linter, compiler, bundler, and more (github.com/rome)\",\n                \"uri\": \"https://github.com/rome/tools\",\n                \"author\": \"theBashShell\",\n                \"points\": \"27 points\",\n                \"comments\": \"12 comments\",\n                \"rank\": 12\n            },\n            {\n                \"title\": \"OldVersion.com software downloads for old versions of programs, drivers & games (oldversion.com)\",\n                \"uri\": \"http://www.oldversion.com/\",\n                \"author\": \"gscott\",\n                \"points\": \"202 points\",\n                \"comments\": \"43 comments\",\n                \"rank\": 13\n            },\n            {\n                \"title\": \"Beyond Cyberpunk: Towards a Solarpunk Future (thedorkweb.substack.com)\",\n                \"uri\": \"https://thedorkweb.substack.com/p/towards-a-solarpunk-future\",\n                \"author\": \"headalgorithm\",\n                \"points\": \"111 points\",\n                \"comments\": \"48 comments\",\n                \"rank\": 14\n            },\n            {\n                \"title\": \"Origami Simulator (origamisimulator.org)\",\n                \"uri\": \"https://origamisimulator.org/\",\n                \"author\": \"parisianka\",\n                \"points\": \"8 points\",\n                \"comments\": \"discuss\",\n                \"rank\": 15\n            },\n            {\n                \"title\": \"Ask HN: How do I improve my command of mathematical language?\",\n                \"uri\": \"item?id=24866734\",\n                \"author\": \"deboniscognitio\",\n                \"points\": \"41 points\",\n                \"comments\": \"25 comments\",\n                \"rank\": 16\n            },\n            {\n                \"title\": \"Fighting Rust's Expressive Type System (thefuntastic.com)\",\n                \"uri\": \"https://thefuntastic.com/blog/fighting-rusts-type-system\",\n                \"author\": \"boyter\",\n                \"points\": \"11 points\",\n                \"comments\": \"discuss\",\n                \"rank\": 17\n            },\n            {\n                \"title\": \"Hermione Lee on How to Write a Life (newstatesman.com)\",\n                \"uri\": \"https://www.newstatesman.com/culture/books/2020/10/hermione-lee-how-write-life\",\n                \"author\": \"apollinaire\",\n                \"points\": \"4 points\",\n                \"comments\": \"discuss\",\n                \"rank\": 18\n            },\n            {\n                \"title\": \"ØMQ – The Guide (2011) (zeromq.org)\",\n                \"uri\": \"https://zguide.zeromq.org\",\n                \"author\": \"allending\",\n                \"points\": \"163 points\",\n                \"comments\": \"95 comments\",\n                \"rank\": 19\n            },\n            {\n                \"title\": \"Caterpillar creates 2,700 square metre Pac-Man gameboard (equipmentjournal.com)\",\n                \"uri\": \"https://www.equipmentjournal.com/on-the-job/pac-man-caterpillar-creates-gameboard-video/\",\n                \"author\": \"airstrike\",\n                \"points\": \"6 points\",\n                \"comments\": \"discuss\",\n                \"rank\": 20\n            },\n            {\n                \"title\": \"No More Bold Visions of the Future (jayriverlong.github.io)\",\n                \"uri\": \"https://jayriverlong.github.io/2020/10/24/future.html\",\n                \"author\": \"riverlong\",\n                \"points\": \"14 points\",\n                \"comments\": \"4 comments\",\n                \"rank\": 21\n            },\n            {\n                \"title\": \"Boston Dynamics Spot Measured Background Radiation in Chernobyl Exclusion Zone (ukrinform.ua)\",\n                \"uri\": \"https://www.ukrinform.ua/rubric-technology/3122689-robotpes-vid-boston-dynamics-zamirav-radiaciu-u-zoni-vidcuzenna.html\",\n                \"author\": \"app4soft\",\n                \"points\": \"11 points\",\n                \"comments\": \"9 comments\",\n                \"rank\": 22\n            },\n            {\n                \"title\": \"Emily Dickinson Lexicon (byu.edu)\",\n                \"uri\": \"https://edl.byu.edu\",\n                \"author\": \"hkhn\",\n                \"points\": \"25 points\",\n                \"comments\": \"1 comment\",\n                \"rank\": 23\n            },\n            {\n                \"title\": \"IMF Conference: Central Bank Digital Currencies (CBDC) for Cross-Border Payments (imf.org)\",\n                \"uri\": \"https://www.imf.org/en/News/Seminars/Conferences/2020/10/19/cross-border-payment\",\n                \"author\": \"walterbell\",\n                \"points\": \"6 points\",\n                \"comments\": \"1 comment\",\n                \"rank\": 24\n            },\n            {\n                \"title\": \"YC Gaming Startups Are Hiring (Job Expo with Emmett Shear, CEO of Twitch)\",\n                \"uri\": \"item?id=24880422\",\n                \"author\": \"ink_13\",\n                \"points\": \"79 points\",\n                \"comments\": \"23 comments\",\n                \"rank\": 25\n            },\n            {\n                \"title\": \"How the bootstrap load made the historic Intel 8008 processor possible (righto.com)\",\n                \"uri\": \"https://www.righto.com/2020/10/how-bootstrap-load-made-historic-intel.html\",\n                \"author\": \"k__\",\n                \"points\": \"127 points\",\n                \"comments\": \"15 comments\",\n                \"rank\": 26\n            },\n            {\n                \"title\": \"Porting Firecracker to a Raspberry Pi 4 (2019) (cloudkernels.net)\",\n                \"uri\": \"https://blog.cloudkernels.net/posts/firecracker-rpi4/\",\n                \"author\": \"rosstex\",\n                \"points\": \"56 points\",\n                \"comments\": \"9 comments\",\n                \"rank\": 27\n            },\n            {\n                \"title\": \"Space Engine – The Universe Simulator (spaceengine.org)\",\n                \"uri\": \"http://spaceengine.org/\",\n                \"author\": \"AdmiralAsshat\",\n                \"points\": \"50 points\",\n                \"comments\": \"5 comments\",\n                \"rank\": 28\n            },\n            {\n                \"title\": \"Delete Facebook and You'll Lose All Oculus Games for Good (gamespot.com)\",\n                \"uri\": \"https://www.gamespot.com/articles/delete-facebook-and-youll-lose-all-oculus-games-for-good/1100-6483716/\",\n                \"author\": \"headalgorithm\",\n                \"points\": \"38 points\",\n                \"comments\": \"19 comments\",\n                \"rank\": 29\n            },\n            {\n                \"title\": \"Good Quality DOSBox Video Capture (susam.in)\",\n                \"uri\": \"https://susam.in/blog/good-quality-dosbox-video-capture/\",\n                \"author\": null,\n                \"points\": null,\n                \"comments\": null,\n                \"rank\": 30\n            }\n        ]\n    }\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"variable": [
+		{
+			"id": "url",
+			"key": "url",
+			"value": "",
+			"type": "any",
+			"description": {
+				"content": "URL for the request.",
+				"type": "text/plain"
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
