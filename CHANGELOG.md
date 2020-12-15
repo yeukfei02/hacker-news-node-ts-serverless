@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.5.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.5.0...v1.5.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* 🐛 fix playground endpoint ([4d35873](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/4d3587366a44e92ee03203e6fb822410eb70ef96))
+
 ## [1.5.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.4.1...v1.5.0) (2020-12-15)
 
 
