@@ -7,17 +7,17 @@ frameworkVersion: '2'
 provider:
   name: aws
   runtime: nodejs12.x
-  stage: v1
+  stage: dev
   region: ap-southeast-1
   environment:
-    NODE_ENV: production
+    NODE_ENV: development
   iamRoleStatements:
-    - Effect: "Allow"
+    - Effect: 'Allow'
       Action:
-        - "xray:PutTraceSegments"
-        - "xray:PutTelemetryRecords"
+        - 'xray:PutTraceSegments'
+        - 'xray:PutTelemetryRecords'
       Resource:
-        - "*"
+        - '*'
 
 functions:
   graphql:
