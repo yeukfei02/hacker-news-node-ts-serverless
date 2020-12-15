@@ -16,9 +16,11 @@ export const hackerNewsTest = (): void => {
       const HACKER_NEWS = `
         query hackerNews ($pageNumber: Int) {
           hackerNews (pageNumber: $pageNumber) {
+              id
               title
               uri
               author
+              hours
               points
               comments
               rank
