@@ -10,9 +10,11 @@ const typeDefs = gql`
   }
 
   type HackerNews {
+    id: String
     title: String
     uri: String
     author: String
+    hours: String
     points: String
     comments: String
     rank: Int
