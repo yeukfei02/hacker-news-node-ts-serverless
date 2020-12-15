@@ -12,7 +12,7 @@ const server = new ApolloServer({
   tracing: true,
   introspection: true,
   playground: {
-    endpoint: '/v1',
+    endpoint: '/prod',
   },
 });
 
