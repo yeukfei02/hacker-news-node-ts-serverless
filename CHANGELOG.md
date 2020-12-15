@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.4.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.4.0...v1.4.1) (2020-12-15)
+
+
+### Bug Fixes
+
+* 🐛 fix stage and NODE_ENV ([e218326](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/e21832664f3999cdcfc414ac034369ba741accfd))
+* 🐛 fix stage and NODE_ENV in master branch ([c4ce992](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/c4ce992d6e93b7aa3713b4d66d930fae495ed53d))
+
 ## [1.4.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.3.0...v1.4.0) (2020-11-25)
 
 
