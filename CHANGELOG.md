@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.5.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.4.1...v1.5.0) (2020-12-15)
+
+
+### Features
+
+* 🎸 add id and hours in response ([599e610](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/599e6103a6a6ae0eb91bdc3a5bcc0a56309a64d0))
+
 ### [1.4.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.4.0...v1.4.1) (2020-12-15)
 
 
