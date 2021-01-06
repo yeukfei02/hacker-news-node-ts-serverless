@@ -19,7 +19,6 @@ const server = new ApolloServer({
       event: event,
       context: context,
     };
-
     return data;
   },
 });
