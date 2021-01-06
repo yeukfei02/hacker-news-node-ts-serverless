@@ -1,6 +1,6 @@
 {
   "name": "hacker-news-node-ts-serverless",
-  "version": "1.5.3",
+  "version": "1.5.4",
   "main": "app.js",
   "repository": "https://github.com/yeukfei02/hacker-news-node-ts-serverless.git",
   "author": "Donald Wu <yeukfei02@gmail.com>",
