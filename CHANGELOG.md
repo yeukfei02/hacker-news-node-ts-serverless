@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.5.6...v1.6.0) (2021-01-06)
+
+
+### Features
+
+* 🎸 add context in handler ([fa721af](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/fa721afac552ab7dda6cd737ce25130e1c3e884f))
+
+
+### Bug Fixes
+
+* 🐛 fix  playground endpoint ([93aef53](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/93aef5327c7d671b5c899440f49a90e087708bac))
+* 🐛 fix code ([f13c593](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/f13c593a2b77c2c332b210566b6d2fe0182d8327))
+* 🐛 fix playground endpoint ([0fe31b4](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/0fe31b469e98aabf71f5c25b2c2c7dd3d6c3cc6d))
+
 ### [1.5.6](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.5.5...v1.5.6) (2021-01-06)
 
 ### [1.5.5](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.5.4...v1.5.5) (2021-01-06)
