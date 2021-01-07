@@ -25,6 +25,7 @@ provider:
         - '*'
   apiGateway:
     shouldStartNameWithService: true
+    description: hacker news node ts serverless dev
   lambdaHashingVersion: 20201221
 
 functions:
