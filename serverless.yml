@@ -10,7 +10,7 @@ provider:
   runtime: nodejs12.x
   stage: prod
   region: ap-southeast-1
-  apiName: hacker-news-node-ts-serverless-dev
+  apiName: hacker-news-node-ts-serverless-prod
   tracing:
     apiGateway: true
     lambda: true
