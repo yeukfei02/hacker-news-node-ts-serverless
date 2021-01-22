@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.6.1...v1.7.0) (2021-01-22)
+
+
+### Features
+
+* 🎸 update sls lib ([2a60e34](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/2a60e34c464dc24e8ba74536ee0ca7a1fcb83a5e))
+
+
+### Bug Fixes
+
+* 🐛 add apiGateway description ([cf320e8](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/cf320e8004cbd97edb76a7913d67291c43c8823f))
+* 🐛 fix apiGateway description in master ([82f4df6](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/82f4df6d5f70ff25af1734e35b64d392bfda0824))
+
 ### [1.6.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.6.0...v1.6.1) (2021-01-07)
 
 
