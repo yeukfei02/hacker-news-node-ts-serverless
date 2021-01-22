@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.8.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.7.1...v1.8.0) (2021-01-22)
+
+
+### Features
+
+* 🎸 add package command ([d519cb8](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/d519cb89fc6f5d856c31098c4c1ef6a874d85d04))
+* 🎸 add serverless-prune-plugin ([4839b53](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/4839b533cf138eae79e8addc8a71604007d641ea))
+
+
+### Bug Fixes
+
+* 🐛 update sls lib ([241dfd2](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/241dfd2ceb0430a51850bb3d38f03bd655087b9f))
+
 ### [1.7.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.7.0...v1.7.1) (2021-01-22)
 
 
