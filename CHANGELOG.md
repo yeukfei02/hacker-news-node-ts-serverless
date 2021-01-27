@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.8.2](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.8.1...v1.8.2) (2021-01-27)
+
+
+### Bug Fixes
+
+* 🐛 add remove command ([83fe5ba](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/83fe5baf7db18b052dafbd770cf2c8e951aa0be7))
+
 ### [1.8.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.8.0...v1.8.1) (2021-01-26)
 
 
