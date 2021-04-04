@@ -2,19 +2,19 @@
 
 hacker-news-node-ts-serverless
 
-documentation: https://documenter.getpostman.com/view/3827865/TVYF7yEq
+documentation: <https://documenter.getpostman.com/view/3827865/TVYF7yEq>
 
-api url: https://uyurr10yi3.execute-api.ap-southeast-1.amazonaws.com/prod/
+api url: <https://uyurr10yi3.execute-api.ap-southeast-1.amazonaws.com/prod/>
 
-## Requirement:
+## Requirement
 
 - install yarn
 - install node (v12+)
 - install serverless
 
-## Testing and run:
+## Testing and run
 
-```
+```zsh
 // test api in local
 $ yarn run dev
 
