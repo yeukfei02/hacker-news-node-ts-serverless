@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.9.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.8.2...v1.9.0) (2021-07-04)
+
+
+### Features
+
+* 🎸 add github actions ([125dbac](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/125dbac8f52bb97416b26d32b6b61de07c753a35))
+
+
+### Bug Fixes
+
+* 🐛 add controller func ([dd3513e](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/dd3513ecf523c8c14660913420a9c5c1be5fd454))
+* 🐛 fix sls.yml, readme.md ([b874795](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/b87479534d1874c3cfc487c944fadacd88336ab9))
+* 🐛 fix stage in deploy.yml ([fea0bce](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/fea0bcedf7f64f280ab52e3f76a7f46de2739922))
+* 🐛 update readme.md ([0d70944](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/0d709442ae5856357fc67227c2ddfcbb3ee43994))
+* 🐛 update serverless-plugin-split-stacks lib ([de4f68d](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/de4f68dbeed79fbbc8f76a87fb3fa49daa726d1c))
+* 🐛 update sls lib ([382f381](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/382f381ca033dd6efdcf132d42f65d295407e5a1))
+
 ### [1.8.2](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.8.1...v1.8.2) (2021-01-27)
 
 
