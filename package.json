@@ -15,7 +15,8 @@
     "graphql": "^15.4.0",
     "lodash": "^4.17.20",
     "moment": "^2.29.1",
-    "moment-timezone": "^0.5.31"
+    "moment-timezone": "^0.5.31",
+    "nexus": "^1.1.0"
   },
   "devDependencies": {
     "@types/aws-sdk": "^2.7.0",
