@@ -47,7 +47,7 @@ plugins:
   - serverless-prune-plugin
   - serverless-plugin-typescript
   - serverless-offline
-  - serverless-plugin-split-stacks
+  # - serverless-plugin-split-stacks
 
 custom:
   prune:
