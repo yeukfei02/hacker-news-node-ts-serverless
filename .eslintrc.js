@@ -8,6 +8,7 @@ module.exports = {
   rules: {
     '@typescript-eslint/camelcase': 'off',
     '@typescript-eslint/no-var-requires': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
   },
   parserOptions: {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
