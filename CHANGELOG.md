@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.10.0...v1.10.1) (2021-07-31)
+
+
+### Bug Fixes
+
+* 🐛 add generated folder ([d0066ce](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/d0066cec98286296e9fd36d6b3c1476da7873c38))
+* 🐛 add generated folder ([3e8582d](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/3e8582deafa85f3c745a30a3896376717a5929c2))
+* 🐛 fix .eslintrc.js ([ea63b5b](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/ea63b5b7f5ab64ebd2200210032c991ffe44c071))
+* 🐛 update nexus-typegen.ts ([feef437](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/feef4379c0111e4861213ff2531583839e227254))
+
 ## [1.10.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.9.0...v1.10.0) (2021-07-31)
 
 
