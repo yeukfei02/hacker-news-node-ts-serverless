@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.10.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.9.0...v1.10.0) (2021-07-31)
+
+
+### Features
+
+* 🎸 add nexus lib for schema.graphql ([dcb9e0e](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/dcb9e0e4766ca774b9e3436eb967e7bd7a444385))
+
 ## [1.9.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.8.2...v1.9.0) (2021-07-04)
 
 
