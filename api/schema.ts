@@ -6,7 +6,7 @@ import * as query from './query/query';
 export const schema = makeSchema({
   types: [query],
   outputs: {
-    typegen: path.join(process.cwd(), '/nexus-typegen.ts'),
-    schema: path.join(process.cwd(), '/schema.graphql'),
+    typegen: path.join(process.cwd(), '/generated/nexus-typegen.ts'),
+    schema: path.join(process.cwd(), '/generated/schema.graphql'),
   },
 });
