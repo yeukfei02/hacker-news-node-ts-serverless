@@ -4,12 +4,12 @@ hacker-news-node-ts-serverless
 
 documentation: <https://documenter.getpostman.com/view/3827865/TVYF7yEq>
 
-api url: <https://6gy2a6bwd8.execute-api.ap-southeast-1.amazonaws.com/prod/>
+api url: <https://p2refkuv3e.execute-api.ap-southeast-1.amazonaws.com/prod/>
 
 ## Requirement
 
 - install yarn
-- install node (v12+)
+- install node (v14+)
 - install serverless
 
 ## Testing and run
