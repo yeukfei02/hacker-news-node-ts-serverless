@@ -1,4 +1,4 @@
-import { fetchHackerNews } from '../api/fetchHackerNews';
+import { fetchHackerNews } from '../request/fetchHackerNews';
 
 export const hackerNewsControllerFunc = async (parent: any, args: any, context: any, info: any): Promise<any[]> => {
   const pageNumber = args.pageNumber || 1;
