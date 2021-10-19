@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.10.3](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.10.2...v1.10.3) (2021-10-19)
+
+
+### Bug Fixes
+
+* 🐛 fix fetchHackerNews func ([d208881](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/d20888154be0e0291a8a4813273399d00dfaf124))
+
 ### [1.10.2](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.10.1...v1.10.2) (2021-07-31)
 
 
