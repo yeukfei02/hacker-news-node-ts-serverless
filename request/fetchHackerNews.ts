@@ -50,8 +50,8 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
       $('table.itemlist tbody tr td.title:nth-child(3)').each((i, element) => {
         const currentItem = $(element);
 
-        const title = currentItem.text();
-        const uri = currentItem.find('a.storylink').attr('href');
+        const title = currentItem.find('a.titlelink').text();
+        const uri = currentItem.find('a.titlelink').attr('href');
         if (title && uri) {
           console.log('title = ', title);
           console.log('uri = ', uri);
