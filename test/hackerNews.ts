@@ -1,36 +1,31 @@
-import { ApolloServer } from 'apollo-server';
-import { schema } from '../api/schema';
+import { GraphQLClient, gql } from 'graphql-request';
 
-import { createTestClient } from 'apollo-server-testing';
-
-const server = new ApolloServer({
-  schema,
-});
-const { query } = createTestClient(server);
+const rootUrl = 'https://p2refkuv3e.execute-api.ap-southeast-1.amazonaws.com/prod';
+const graphQLClient = new GraphQLClient(rootUrl);
 
 export const hackerNewsTest = (): void => {
   describe('hackerNews test', () => {
-    test('hackerNews test', async () => {
-      const HACKER_NEWS = `
-        query hackerNews ($pageNumber: Int) {
-          hackerNews (pageNumber: $pageNumber) {
-              id
-              title
-              uri
-              author
-              hours
-              points
-              comments
-              rank
+    test('hackerNews', async () => {
+      const HACKER_NEWS = gql`
+        query hackerNews($pageNumber: Int) {
+          hackerNews(pageNumber: $pageNumber) {
+            id
+            title
+            uri
+            author
+            hours
+            points
+            comments
+            rank
           }
         }
       `;
-      const response = await query({ query: HACKER_NEWS, variables: { pageNumber: 1 } });
+      const variables = { pageNumber: 1 };
+      const response = await graphQLClient.request(HACKER_NEWS, variables);
       console.log('response = ', response);
 
-      expect(response.data).toBeDefined();
-      expect(response.data.hackerNews).toBeDefined();
-      expect(response.errors).toBeUndefined();
+      expect(response).toBeDefined();
+      expect(response.hackerNews).toBeDefined();
     });
   });
 };
