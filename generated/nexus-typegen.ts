@@ -3,32 +3,25 @@
  * Do not make changes to this file directly
  */
 
-
-
-
-
-
-
 declare global {
   interface NexusGen extends NexusGenTypes {}
 }
 
-export interface NexusGenInputs {
-}
+export interface NexusGenInputs {}
 
-export interface NexusGenEnums {
-}
+export interface NexusGenEnums {}
 
 export interface NexusGenScalars {
-  String: string
-  Int: number
-  Float: number
-  Boolean: boolean
-  ID: string
+  String: string;
+  Int: number;
+  Float: number;
+  Boolean: boolean;
+  ID: string;
 }
 
 export interface NexusGenObjects {
-  HackerNews: { // root type
+  HackerNews: {
+    // root type
     author?: string | null; // String
     comments?: string | null; // String
     hours?: string | null; // String
@@ -37,22 +30,21 @@ export interface NexusGenObjects {
     rank?: number | null; // Int
     title?: string | null; // String
     uri?: string | null; // String
-  }
+  };
   Query: {};
 }
 
-export interface NexusGenInterfaces {
-}
+export interface NexusGenInterfaces {}
 
-export interface NexusGenUnions {
-}
+export interface NexusGenUnions {}
 
-export type NexusGenRootTypes = NexusGenObjects
+export type NexusGenRootTypes = NexusGenObjects;
 
-export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars
+export type NexusGenAllTypes = NexusGenRootTypes & NexusGenScalars;
 
 export interface NexusGenFieldTypes {
-  HackerNews: { // field return type
+  HackerNews: {
+    // field return type
     author: string | null; // String
     comments: string | null; // String
     hours: string | null; // String
@@ -61,41 +53,43 @@ export interface NexusGenFieldTypes {
     rank: number | null; // Int
     title: string | null; // String
     uri: string | null; // String
-  }
-  Query: { // field return type
+  };
+  Query: {
+    // field return type
     hackerNews: NexusGenRootTypes['HackerNews'][]; // [HackerNews!]!
-  }
+  };
 }
 
 export interface NexusGenFieldTypeNames {
-  HackerNews: { // field return type name
-    author: 'String'
-    comments: 'String'
-    hours: 'String'
-    id: 'String'
-    points: 'String'
-    rank: 'Int'
-    title: 'String'
-    uri: 'String'
-  }
-  Query: { // field return type name
-    hackerNews: 'HackerNews'
-  }
+  HackerNews: {
+    // field return type name
+    author: 'String';
+    comments: 'String';
+    hours: 'String';
+    id: 'String';
+    points: 'String';
+    rank: 'Int';
+    title: 'String';
+    uri: 'String';
+  };
+  Query: {
+    // field return type name
+    hackerNews: 'HackerNews';
+  };
 }
 
 export interface NexusGenArgTypes {
   Query: {
-    hackerNews: { // args
+    hackerNews: {
+      // args
       pageNumber?: number | null; // Int
-    }
-  }
+    };
+  };
 }
 
-export interface NexusGenAbstractTypeMembers {
-}
+export interface NexusGenAbstractTypeMembers {}
 
-export interface NexusGenTypeInterfaces {
-}
+export interface NexusGenTypeInterfaces {}
 
 export type NexusGenObjectNames = keyof NexusGenObjects;
 
@@ -115,11 +109,11 @@ export type NexusGenAbstractsUsingStrategyResolveType = never;
 
 export type NexusGenFeaturesConfig = {
   abstractTypeStrategies: {
-    isTypeOf: false
-    resolveType: true
-    __typename: false
-  }
-}
+    isTypeOf: false;
+    resolveType: true;
+    __typename: false;
+  };
+};
 
 export interface NexusGenTypes {
   context: any;
@@ -138,8 +132,13 @@ export interface NexusGenTypes {
   scalarNames: NexusGenScalarNames;
   unionNames: NexusGenUnionNames;
   allInputTypes: NexusGenTypes['inputNames'] | NexusGenTypes['enumNames'] | NexusGenTypes['scalarNames'];
-  allOutputTypes: NexusGenTypes['objectNames'] | NexusGenTypes['enumNames'] | NexusGenTypes['unionNames'] | NexusGenTypes['interfaceNames'] | NexusGenTypes['scalarNames'];
-  allNamedTypes: NexusGenTypes['allInputTypes'] | NexusGenTypes['allOutputTypes']
+  allOutputTypes:
+    | NexusGenTypes['objectNames']
+    | NexusGenTypes['enumNames']
+    | NexusGenTypes['unionNames']
+    | NexusGenTypes['interfaceNames']
+    | NexusGenTypes['scalarNames'];
+  allNamedTypes: NexusGenTypes['allInputTypes'] | NexusGenTypes['allOutputTypes'];
   abstractTypes: NexusGenTypes['interfaceNames'] | NexusGenTypes['unionNames'];
   abstractTypeMembers: NexusGenAbstractTypeMembers;
   objectsUsingAbstractStrategyIsTypeOf: NexusGenObjectsUsingAbstractStrategyIsTypeOf;
@@ -147,18 +146,11 @@ export interface NexusGenTypes {
   features: NexusGenFeaturesConfig;
 }
 
-
 declare global {
-  interface NexusGenPluginTypeConfig<TypeName extends string> {
-  }
-  interface NexusGenPluginInputTypeConfig<TypeName extends string> {
-  }
-  interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {
-  }
-  interface NexusGenPluginInputFieldConfig<TypeName extends string, FieldName extends string> {
-  }
-  interface NexusGenPluginSchemaConfig {
-  }
-  interface NexusGenPluginArgConfig {
-  }
+  interface NexusGenPluginTypeConfig<TypeName extends string> {}
+  interface NexusGenPluginInputTypeConfig<TypeName extends string> {}
+  interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {}
+  interface NexusGenPluginInputFieldConfig<TypeName extends string, FieldName extends string> {}
+  interface NexusGenPluginSchemaConfig {}
+  interface NexusGenPluginArgConfig {}
 }
