@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.11.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.10.3...v1.11.0) (2022-01-12)
+
+
+### Features
+
+* 🎸 add generate:nexus script ([c62921c](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/c62921cd1a3d345a8e08da41eaa0627d54c7bb49))
+* 🎸 add graphql-request ([8eca6e0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/8eca6e0ebc31489de24b47905c3b8f54bf86e58d))
+* 🎸 update sls lib and use arm64 architecture ([ddf90f3](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/ddf90f3cbc6015f11abff7a96935a48e97d6ee3a))
+
 ### [1.10.3](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.10.2...v1.10.3) (2021-10-19)
 
 
