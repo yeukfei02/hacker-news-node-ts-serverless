@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.11.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.11.0...v1.11.1) (2022-01-31)
+
+
+### Bug Fixes
+
+* 🐛 update sls lib ([9851538](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/98515385054866257752c5a945d51ebbc9cd2bc5))
+
 ## [1.11.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.10.3...v1.11.0) (2022-01-12)
 
 
