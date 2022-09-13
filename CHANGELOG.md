@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.12.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.11.2...v1.12.0) (2022-09-13)
+
+
+### Features
+
+* 🎸 update husky lib, readme.md, deploy.yml ([b9dc542](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/b9dc542d819575fe815506de9ccbe56da178f2ee))
+
+
+### Bug Fixes
+
+* 🐛 update serverless.yml ([ac12039](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/ac12039c814aafe7835a3525ee6e77adf5a2fc62))
+* 🐛 update sls lib ([30d3574](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/30d35741fbcebb8890d4b2d7e8cbf2ac8670acd4))
+
 ### [1.11.2](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.11.1...v1.11.2) (2022-03-18)
 
 
