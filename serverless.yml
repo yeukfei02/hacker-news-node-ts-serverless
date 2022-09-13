@@ -28,7 +28,6 @@ provider:
   apiGateway:
     shouldStartNameWithService: true
     description: hacker news node ts serverless prod
-  lambdaHashingVersion: 20201221
   architecture: arm64
   timeout: 30
 
