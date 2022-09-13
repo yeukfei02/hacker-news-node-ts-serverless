@@ -34,7 +34,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "git-cz": "^4.8.0",
     "graphql-request": "^3.7.0",
-    "husky": "^4.3.0",
+    "husky": "^8.0.0",
     "jest": "^26.6.1",
     "prettier": "^2.1.2",
     "serverless": "^3.7.8",
@@ -53,14 +53,10 @@
     "remove": "serverless remove",
     "generate:nexus": "npx ts-node --transpile-only ./api/schema.ts",
     "lint": "eslint '*/**/*.{ts,tsx}' --quiet --fix",
+    "format": "prettier --write '*/**/*.{ts,tsx}'",
     "test": "jest --detectOpenHandles",
     "commit": "git-cz",
-    "release": "standard-version"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn run generate:nexus && yarn lint",
-      "pre-push": "yarn run generate:nexus && yarn lint"
-    }
+    "release": "standard-version",
+    "prepare": "husky install"
   }
 }
