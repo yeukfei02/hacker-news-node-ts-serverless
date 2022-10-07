@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.12.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.12.0...v1.12.1) (2022-10-07)
+
+
+### Bug Fixes
+
+* 🐛 fix html element selector ([ca30094](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/ca30094770799393faa05eebe7b503813eb3c068))
+
 ## [1.12.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.11.2...v1.12.0) (2022-09-13)
 
 
