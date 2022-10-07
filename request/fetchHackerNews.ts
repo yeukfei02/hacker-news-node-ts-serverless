@@ -50,8 +50,8 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
       $('table.itemlist tbody tr td.title:nth-child(3)').each((i, element) => {
         const currentItem = $(element);
 
-        const title = currentItem.find('a.titlelink').text();
-        const uri = currentItem.find('a.titlelink').attr('href');
+        const title = currentItem.first().find('a').text();
+        const uri = currentItem.first().find('a').attr('href');
         if (title && uri) {
           console.log('title = ', title);
           console.log('uri = ', uri);
@@ -69,7 +69,7 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
         .each((i, element) => {
           const currentItem = $(element);
 
-          const subtext = currentItem.find('.subtext').children();
+          const subtext = currentItem.find('td.subtext > span.subline').children();
           const author = $(subtext).eq(1).text();
 
           const hoursDiv = $(subtext).eq(2).children();
