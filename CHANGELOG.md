@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.13.0](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.12.1...v1.13.0) (2023-05-30)
+
+
+### Features
+
+* 🎸 update eslint and prettier ([30ee019](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/30ee019526f3a374586b32566ec22ed8199587ae))
+
+
+### Bug Fixes
+
+* 🐛 fix cheerio select element ([2707ca5](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/2707ca5bf412654ccf12a45f7f38262648643234))
+* 🐛 return generate:nexus ([ad2698f](https://github.com/yeukfei02/hacker-news-node-ts-serverless/commit/ad2698f6a9306babf5e4ab9d0843c232e8edb9e4))
+
 ### [1.12.1](https://github.com/yeukfei02/hacker-news-node-ts-serverless/compare/v1.12.0...v1.12.1) (2022-10-07)
 
 
