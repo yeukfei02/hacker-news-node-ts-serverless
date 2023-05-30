@@ -2,13 +2,33 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 import _ from 'lodash';
 
-export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
-  const idList: any[] = [];
-  const firstList: any[] = [];
-  const secondList: any[] = [];
-  const thirdList: any[] = [];
+interface Id {
+  id: string | undefined;
+}
 
-  let response: any = null;
+interface Rank {
+  rank: string;
+}
+
+interface TitleAndUrl {
+  title: string;
+  uri: string;
+}
+
+interface AuthorAndHoursAndPointsAndComments {
+  author: string;
+  hours: string;
+  points: string;
+  comments: string;
+}
+
+export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
+  const idList: Id[] = [];
+  const rankList: Rank[] = [];
+  const titleAndUrlList: TitleAndUrl[] = [];
+  const authorAndHoursAndPointsAndCommentsList: AuthorAndHoursAndPointsAndComments[] = [];
+
+  let response;
   if (!pageNumber) {
     response = await axios.get(`https://news.ycombinator.com/news`);
   } else {
@@ -22,7 +42,10 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
 
       const $ = cheerio.load(html);
 
-      $('table.itemlist tbody tr.athing').each((i, element) => {
+      const tableBody = 'table[border="0"][cellpadding="0"][cellspacing="0"] tbody';
+      const tableBodyRow = 'table[border="0"][cellpadding="0"][cellspacing="0"] tbody tr';
+
+      $(`${tableBody} tr.athing`).each((i, element) => {
         const currentItem = $(element);
         const id = currentItem.attr('id');
         console.log('id = ', id);
@@ -33,7 +56,7 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
         idList.push(obj);
       });
 
-      $('table.itemlist tbody tr td.title:nth-child(1)').each((i, element) => {
+      $(`${tableBodyRow} td.title:nth-child(1)`).each((i, element) => {
         const currentItem = $(element);
 
         const rank = currentItem.find('.rank').text().replace('.', '');
@@ -43,11 +66,11 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
           const obj = {
             rank: rank,
           };
-          firstList.push(obj);
+          rankList.push(obj);
         }
       });
 
-      $('table.itemlist tbody tr td.title:nth-child(3)').each((i, element) => {
+      $(`${tableBodyRow} td.title:nth-child(3)`).each((i, element) => {
         const currentItem = $(element);
 
         const title = currentItem.first().find('a').text();
@@ -60,11 +83,11 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
             title: title,
             uri: uri,
           };
-          secondList.push(newObj);
+          titleAndUrlList.push(newObj);
         }
       });
 
-      $('table.itemlist tbody tr')
+      $(tableBodyRow)
         .not('.athing .spacer')
         .each((i, element) => {
           const currentItem = $(element);
@@ -90,13 +113,13 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
               points: points,
               comments: comments,
             };
-            thirdList.push(newObj);
+            authorAndHoursAndPointsAndCommentsList.push(newObj);
           }
         });
     }
   }
 
-  const hackerNewsList = _.merge(idList, firstList, secondList, thirdList);
+  const hackerNewsList = _.merge(idList, rankList, titleAndUrlList, authorAndHoursAndPointsAndCommentsList);
 
   return hackerNewsList;
 };
