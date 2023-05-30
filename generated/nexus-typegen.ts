@@ -56,25 +56,25 @@ export interface NexusGenFieldTypes {
   };
   Query: {
     // field return type
-    hackerNews: NexusGenRootTypes['HackerNews'][]; // [HackerNews!]!
+    hackerNews: NexusGenRootTypes["HackerNews"][]; // [HackerNews!]!
   };
 }
 
 export interface NexusGenFieldTypeNames {
   HackerNews: {
     // field return type name
-    author: 'String';
-    comments: 'String';
-    hours: 'String';
-    id: 'String';
-    points: 'String';
-    rank: 'Int';
-    title: 'String';
-    uri: 'String';
+    author: "String";
+    comments: "String";
+    hours: "String";
+    id: "String";
+    points: "String";
+    rank: "Int";
+    title: "String";
+    uri: "String";
   };
   Query: {
     // field return type name
-    hackerNews: 'HackerNews';
+    hackerNews: "HackerNews";
   };
 }
 
@@ -131,15 +131,20 @@ export interface NexusGenTypes {
   interfaceNames: NexusGenInterfaceNames;
   scalarNames: NexusGenScalarNames;
   unionNames: NexusGenUnionNames;
-  allInputTypes: NexusGenTypes['inputNames'] | NexusGenTypes['enumNames'] | NexusGenTypes['scalarNames'];
+  allInputTypes:
+    | NexusGenTypes["inputNames"]
+    | NexusGenTypes["enumNames"]
+    | NexusGenTypes["scalarNames"];
   allOutputTypes:
-    | NexusGenTypes['objectNames']
-    | NexusGenTypes['enumNames']
-    | NexusGenTypes['unionNames']
-    | NexusGenTypes['interfaceNames']
-    | NexusGenTypes['scalarNames'];
-  allNamedTypes: NexusGenTypes['allInputTypes'] | NexusGenTypes['allOutputTypes'];
-  abstractTypes: NexusGenTypes['interfaceNames'] | NexusGenTypes['unionNames'];
+    | NexusGenTypes["objectNames"]
+    | NexusGenTypes["enumNames"]
+    | NexusGenTypes["unionNames"]
+    | NexusGenTypes["interfaceNames"]
+    | NexusGenTypes["scalarNames"];
+  allNamedTypes:
+    | NexusGenTypes["allInputTypes"]
+    | NexusGenTypes["allOutputTypes"];
+  abstractTypes: NexusGenTypes["interfaceNames"] | NexusGenTypes["unionNames"];
   abstractTypeMembers: NexusGenAbstractTypeMembers;
   objectsUsingAbstractStrategyIsTypeOf: NexusGenObjectsUsingAbstractStrategyIsTypeOf;
   abstractsUsingStrategyResolveType: NexusGenAbstractsUsingStrategyResolveType;
@@ -149,8 +154,14 @@ export interface NexusGenTypes {
 declare global {
   interface NexusGenPluginTypeConfig<TypeName extends string> {}
   interface NexusGenPluginInputTypeConfig<TypeName extends string> {}
-  interface NexusGenPluginFieldConfig<TypeName extends string, FieldName extends string> {}
-  interface NexusGenPluginInputFieldConfig<TypeName extends string, FieldName extends string> {}
+  interface NexusGenPluginFieldConfig<
+    TypeName extends string,
+    FieldName extends string
+  > {}
+  interface NexusGenPluginInputFieldConfig<
+    TypeName extends string,
+    FieldName extends string
+  > {}
   interface NexusGenPluginSchemaConfig {}
   interface NexusGenPluginArgConfig {}
 }

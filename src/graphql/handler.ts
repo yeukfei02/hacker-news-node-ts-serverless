@@ -1,8 +1,8 @@
-import { ApolloServer } from 'apollo-server-lambda';
-import { schema } from '../../api/schema';
+import { ApolloServer } from "apollo-server-lambda";
+import { schema } from "../../api/schema";
 
-import awsXRay from 'aws-xray-sdk';
-import awsSdk from 'aws-sdk';
+import awsXRay from "aws-xray-sdk";
+import awsSdk from "aws-sdk";
 if (process.env._X_AMZN_TRACE_ID) {
   awsXRay.captureAWS(awsSdk);
 }
@@ -12,7 +12,7 @@ const server = new ApolloServer({
   tracing: true,
   introspection: true,
   playground: {
-    endpoint: '/prod',
+    endpoint: "/prod",
   },
   context: ({ event, context }) => {
     const data = {
