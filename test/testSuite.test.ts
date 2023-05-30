@@ -1,5 +1,5 @@
-import { hackerNewsTest } from './hackerNews';
+import { hackerNewsTest } from "./hackerNews";
 
-describe('testSuite test case', () => {
+describe("testSuite test case", () => {
   hackerNewsTest();
 });

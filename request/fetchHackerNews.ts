@@ -1,6 +1,6 @@
-import axios from 'axios';
-import cheerio from 'cheerio';
-import _ from 'lodash';
+import axios from "axios";
+import cheerio from "cheerio";
+import _ from "lodash";
 
 interface Id {
   id: string | undefined;
@@ -26,13 +26,16 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
   const idList: Id[] = [];
   const rankList: Rank[] = [];
   const titleAndUrlList: TitleAndUrl[] = [];
-  const authorAndHoursAndPointsAndCommentsList: AuthorAndHoursAndPointsAndComments[] = [];
+  const authorAndHoursAndPointsAndCommentsList: AuthorAndHoursAndPointsAndComments[] =
+    [];
 
   let response;
   if (!pageNumber) {
     response = await axios.get(`https://news.ycombinator.com/news`);
   } else {
-    response = await axios.get(`https://news.ycombinator.com/news?p=${pageNumber}`);
+    response = await axios.get(
+      `https://news.ycombinator.com/news?p=${pageNumber}`
+    );
   }
 
   if (response) {
@@ -42,13 +45,15 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
 
       const $ = cheerio.load(html);
 
-      const tableBody = 'table[border="0"][cellpadding="0"][cellspacing="0"] tbody';
-      const tableBodyRow = 'table[border="0"][cellpadding="0"][cellspacing="0"] tbody tr';
+      const tableBody =
+        'table[border="0"][cellpadding="0"][cellspacing="0"] tbody';
+      const tableBodyRow =
+        'table[border="0"][cellpadding="0"][cellspacing="0"] tbody tr';
 
       $(`${tableBody} tr.athing`).each((i, element) => {
         const currentItem = $(element);
-        const id = currentItem.attr('id');
-        console.log('id = ', id);
+        const id = currentItem.attr("id");
+        console.log("id = ", id);
 
         const obj = {
           id: id,
@@ -59,9 +64,9 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
       $(`${tableBodyRow} td.title:nth-child(1)`).each((i, element) => {
         const currentItem = $(element);
 
-        const rank = currentItem.find('.rank').text().replace('.', '');
+        const rank = currentItem.find(".rank").text().replace(".", "");
         if (rank) {
-          console.log('rank = ', rank);
+          console.log("rank = ", rank);
 
           const obj = {
             rank: rank,
@@ -73,11 +78,11 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
       $(`${tableBodyRow} td.title:nth-child(3)`).each((i, element) => {
         const currentItem = $(element);
 
-        const title = currentItem.first().find('a').text();
-        const uri = currentItem.first().find('a').attr('href');
+        const title = currentItem.first().find("a").text();
+        const uri = currentItem.first().find("a").attr("href");
         if (title && uri) {
-          console.log('title = ', title);
-          console.log('uri = ', uri);
+          console.log("title = ", title);
+          console.log("uri = ", uri);
 
           const newObj = {
             title: title,
@@ -88,11 +93,13 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
       });
 
       $(tableBodyRow)
-        .not('.athing .spacer')
+        .not(".athing .spacer")
         .each((i, element) => {
           const currentItem = $(element);
 
-          const subtext = currentItem.find('td.subtext > span.subline').children();
+          const subtext = currentItem
+            .find("td.subtext > span.subline")
+            .children();
           const author = $(subtext).eq(1).text();
 
           const hoursDiv = $(subtext).eq(2).children();
@@ -102,10 +109,10 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
           const comments = $(subtext).eq(5).text();
 
           if (author && hours && points && comments) {
-            console.log('author = ', author);
-            console.log('hours = ', hours);
-            console.log('points = ', points);
-            console.log('comments = ', comments);
+            console.log("author = ", author);
+            console.log("hours = ", hours);
+            console.log("points = ", points);
+            console.log("comments = ", comments);
 
             const newObj = {
               author: author,
@@ -119,7 +126,12 @@ export const fetchHackerNews = async (pageNumber?: number): Promise<any[]> => {
     }
   }
 
-  const hackerNewsList = _.merge(idList, rankList, titleAndUrlList, authorAndHoursAndPointsAndCommentsList);
+  const hackerNewsList = _.merge(
+    idList,
+    rankList,
+    titleAndUrlList,
+    authorAndHoursAndPointsAndCommentsList
+  );
 
   return hackerNewsList;
 };
